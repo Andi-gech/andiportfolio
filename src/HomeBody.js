@@ -27,7 +27,7 @@ export default function HomeBody({ image, instagram, telegram, linkdn }) {
             professional software developer, passionate about crafting efficient
             and creative solutions. With a strong foundation in software
             development, I'm dedicated to delivering high-quality code and
-            contributing to impactful projects.
+            contributing to impactful projects
           </p>
           <div className="flex sm:flex-row flex-col my-8 justify-between sm:w-3/4  overflow-x-auto">
             <div className="flex flex-col">
