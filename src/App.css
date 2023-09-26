@@ -28,11 +28,30 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.blogcardlist::-webkit-scrollbar {
+}
+
+.blogcardlist::-webkit-scrollbar {
+  width: 2px;
+  height: 5px;
+}
+
+/* Track */
+.blogcardlist::-webkit-scrollbar-track {
+  width: 100px;
+  background: #f1f1f100;
+}
+
+/* Handle */
+.blogcardlist::-webkit-scrollbar-thumb {
+  background: #4effea5c;
+  width: 100px;
+  border-radius: "100%";
+}
+
+/* Handle on hover */
+.blogcardlist::-webkit-scrollbar-thumb:hover {
+  width: 100px;
+  background: #01496d;
+  border-radius: 30px;
 }
