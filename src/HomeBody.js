@@ -1,8 +1,7 @@
 import React from "react";
 import Iconbox from "./Iconbox";
 import splash from "../src/Asset/splash.svg";
-import mypic from "../src/Asset/picss.png";
-import Service from "./Service";
+
 import icon from "../src/Asset/java-script.png";
 import djanogoicon from "../src/Asset/django.png";
 import node from "../src/Asset/physics.png";

@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 import TestimonyCard from "./TestimonyCard";
-import {
-  BsArrowDownLeftSquare,
-  BsArrowLeft,
-  BsArrowRight,
-} from "react-icons/bs";
+import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import useUserFeedback from "./Hooks/useUserfeedback";
 
 export default function Testimonials() {
@@ -22,7 +18,7 @@ export default function Testimonials() {
     },
   ];
 
-  const { data: feedback, isLoading, isError } = useUserFeedback();
+  const { data: feedback } = useUserFeedback();
 
   const changetonext = () => {
     setcurrentpage((cuurentpage + 100) % (feedback.length * 100));

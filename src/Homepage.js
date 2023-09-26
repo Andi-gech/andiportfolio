@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "./Header";
+
 import HomeBody from "./HomeBody";
 import Project from "./Project";
 import Service from "./Service";
@@ -7,7 +7,7 @@ import useAbout from "./Hooks/useAbout";
 import useSocialLink from "./Hooks/useSocialLink";
 
 export default function Homepage() {
-  const { data, isLoading, isError, error } = useAbout();
+  const { data } = useAbout();
   const { data: Link } = useSocialLink();
 
   if (data && Link) {

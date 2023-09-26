@@ -1,13 +1,8 @@
 import React, { useState } from "react";
 import useDarkside from "./useDarkside";
 import { Switch } from "@headlessui/react";
-import {
-  BsSunFill,
-  BsMoonFill,
-  BsHouse,
-  BsInputCursorText,
-} from "react-icons/bs";
-import { FaBlog, FaComment, FaCommentAlt, FaHome } from "react-icons/fa";
+import { BsSunFill, BsMoonFill } from "react-icons/bs";
+import { FaBlog, FaComment, FaHome } from "react-icons/fa";
 
 import { Link } from "react-router-dom";
 export default function Header() {

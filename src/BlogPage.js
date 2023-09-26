@@ -1,10 +1,10 @@
 import React from "react";
-import ProjectCard from "./ProjectCard";
+
 import BlogCard from "./BlogCard";
 import useFinblog from "./Hooks/useFinblog";
 
 export default function BlogPage() {
-  const { isError, isLoading, data } = useFinblog();
+  const { isLoading, data } = useFinblog();
 
   if (isLoading) return <div>loading...</div>;
   return (

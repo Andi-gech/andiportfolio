@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import ProjectCard from "./ProjectCard";
 import more from "../src/Asset/more.png";
 import useFindProject from "./Hooks/useFindProject";
 
 export default function Project() {
-  const { data, isLoading, isError, error } = useFindProject();
+  const { data } = useFindProject();
 
   return (
     <div className=" sm:h-screen h-fit flex flex-col w-full items-center">
@@ -20,6 +20,7 @@ export default function Project() {
           <div className="w-100px  flex  flex-col items-center  justify-center h-100px  my-2 mx-3 bg-back-color  flex-shrink-0  shadow-white shadow-md rounded-lg ">
             <img
               src={more}
+              alt="more"
               className=" hover:cursor-pointer hover:opacity-50 w-12 h-12"
             />
             <p className="text-white  ">Find more</p>
