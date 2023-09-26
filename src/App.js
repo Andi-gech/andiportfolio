@@ -13,9 +13,9 @@ function App() {
       <Header />
       <Routes>
         <Route path="" exact element={<Homepage />} />
-        <Route path="/blogs" exact element={<BlogPage />} />
-        <Route path="/testimonials" exact element={<Testimonials />} />
-        <Route path="/blogs/:id" exact element={<Blogdetail />} />
+        <Route path="blogs" exact element={<BlogPage />} />
+        <Route path="testimonials" exact element={<Testimonials />} />
+        <Route path="blogs/:id" exact element={<Blogdetail />} />
       </Routes>
       <Footer />
     </div>
