@@ -2,11 +2,13 @@ import React from "react";
 
 import BlogCard from "./BlogCard";
 import useFinblog from "./Hooks/useFinblog";
+import LoadingPage from "./LoadingPage";
 
 export default function BlogPage() {
-  const { isLoading, data } = useFinblog();
+  const { isLoading, data, isError, error } = useFinblog();
 
-  if (isLoading) return <div>loading...</div>;
+  if (isLoading) return <LoadingPage />;
+  if (isError) return <div>{error.message}</div>;
   return (
     <div className=" flex-1  flex-col flex items-center ">
       <h2 className="   font-bold text-2xl  my-6  text-buttonhover-color">

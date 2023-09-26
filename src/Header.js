@@ -40,7 +40,7 @@ export default function Header() {
           Testimonials
         </Link>
         <Link className=" list-none  mx-4 hover:cursor-pointer dark:text-white dark:hover:text-buttonhover-color  hover:text-buttonhover-color text-black font-bold  text-base">
-          Projects
+          others
         </Link>
       </div>
       <div className="flex flex-row  h-5/6">
@@ -73,7 +73,7 @@ export default function Header() {
           Hire-me
         </div>
       </div>
-      <div className=" flex-row sm:hidden  fixed  right-0 w-11/12 items-center justify-center   self-center justify-self-center dark:bg-white-opacity-20 bg-black-opacity-20 backdrop-blur-lg rounded-full mx-4 left-0 drop-shadow-lg bottom-0 flex  h-[60px]  ">
+      <div className=" flex-row sm:hidden z-10  fixed  right-0 w-11/12 items-center justify-center   self-center justify-self-center dark:bg-white-opacity-20 bg-black-opacity-20 backdrop-blur-lg rounded-full mx-4 left-0 drop-shadow-lg bottom-0 flex  h-[60px]  ">
         <Link
           to={"/testimonials"}
           className=" h-[50px] w-[50px]  mx-4 rounded-full shadow-sm flex items-center justify-center dark:shadow-black shadow-white"

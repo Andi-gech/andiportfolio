@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import TestimonyCard from "./TestimonyCard";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import useUserFeedback from "./Hooks/useUserfeedback";
+import LoadingPage from "./LoadingPage";
 
 export default function Testimonials() {
   const [cuurentpage, setcurrentpage] = useState(0);
@@ -18,7 +19,7 @@ export default function Testimonials() {
     },
   ];
 
-  const { data: feedback } = useUserFeedback();
+  const { data: feedback, isLoading, isError, error } = useUserFeedback();
 
   const changetonext = () => {
     setcurrentpage((cuurentpage + 100) % (feedback.length * 100));
@@ -35,6 +36,8 @@ export default function Testimonials() {
   //   setfeed([...feedback, { name: name, comment: comment }]);
   //   console.log(feedback);
   // };
+  if (isLoading) return <LoadingPage />;
+  if (isError) return <div>{error.message}</div>;
   return (
     <div className=" flex-1  flex-col flex items-center ">
       <h2 className="   font-bold text-2xl  my-6  text-buttonhover-color">
