@@ -71,6 +71,21 @@ export default function Testimonials() {
           </div>
         </div>
       </div>
+      <div className="flex bg-red sm:hidden ">
+        <div
+          onClick={changeback}
+          className="flex  h-[50px] w-[50px] rounded-md mx-5 shadow-sm dark:shadow-zinc-400  shadow-back-color"
+        >
+          <BsArrowLeft size={50} className="dark:text-white text-black" />
+        </div>
+        <div
+          onClick={changetonext}
+          className="flex  h-[50px] w-[50px] rounded-md mx-5 shadow-sm dark:shadow-zinc-400 shadow-back-color"
+        >
+          <BsArrowRight size={50} className="dark:text-white text-black" />
+        </div>
+      </div>
+
       <div className=" flex flex-col mt-4      w-full  justify-center items-center">
         <div className=" w-full h-1/6 px-4 flex items-center justify-center ">
           <h2 className=" font-bold text-2xl    my-6 dark:text-white text-black ">
