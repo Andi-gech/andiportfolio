@@ -5,7 +5,7 @@ import Project from "./Project";
 import Service from "./Service";
 import useAbout from "./Hooks/useAbout";
 import useSocialLink from "./Hooks/useSocialLink";
-import { link } from "joi";
+
 export default function Homepage() {
   const { data, isLoading, isError, error } = useAbout();
   const { data: Link } = useSocialLink();
