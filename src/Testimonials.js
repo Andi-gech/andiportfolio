@@ -3,6 +3,7 @@ import TestimonyCard from "./TestimonyCard";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import useUserFeedback from "./Hooks/useUserfeedback";
 import LoadingPage from "./LoadingPage";
+import useSendComment from "./Hooks/useSendComment";
 
 export default function Testimonials() {
   const [cuurentpage, setcurrentpage] = useState(0);
@@ -18,6 +19,7 @@ export default function Testimonials() {
       comment: "This is a comment2",
     },
   ];
+  const { mutate } = useSendComment();
 
   const { data: feedback, isLoading, isError, error } = useUserFeedback();
 
@@ -29,13 +31,20 @@ export default function Testimonials() {
       setcurrentpage((cuurentpage - 100) % (dtata.length * 100));
     }
   };
-  // const [name, setname] = useState();
-  // const [comment, setcomment] = useState();
-  // const handleSubmit = () => {
-  //   console.log("sds");
-  //   setfeed([...feedback, { name: name, comment: comment }]);
-  //   console.log(feedback);
-  // };
+  const [name, setname] = useState();
+  const [comment, setcomment] = useState();
+  const handleSubmit = (e) => {
+    console.log(name, comment);
+    const datapost = {
+      name: name,
+      message: comment,
+    };
+    mutate(datapost);
+    setname("");
+    setcomment("");
+    e.preventDefault();
+  };
+
   if (isLoading) return <LoadingPage />;
   if (isError) return <div>{error.message}</div>;
   return (
@@ -96,9 +105,10 @@ export default function Testimonials() {
           <div class="flex w-72 flex-col  ">
             <div class="relative h-11 w-full min-w-[200px]">
               <input
-                // onChange={(e) => {
-                //   setname(e.target.value);
-                // }}
+                onChange={(e) => {
+                  setname(e.target.value);
+                }}
+                value={name}
                 placeholder="your name"
                 class="peer h-full w-full text-black dark:text-white border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-buttonhover-color focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
               />
@@ -109,9 +119,10 @@ export default function Testimonials() {
 
             <div class="relative h-[100px] w-full mt-4 min-w-[200px]">
               <textarea
-                // onChange={(e) => {
-                //   setcomment(e.target.value);
-                // }}
+                onChange={(e) => {
+                  setcomment(e.target.value);
+                }}
+                value={comment}
                 type="text"
                 class="peer h-full dark:text-white text-black w-full rounded-[7px] border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-buttonhover-color focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
                 placeholder=" "
@@ -124,7 +135,7 @@ export default function Testimonials() {
         </div>
 
         <div
-          // onClick={handleSubmit}
+          onClick={handleSubmit}
           className=" bg-button-color hover:cursor-pointer hover:text-buttonhover-color flex items-center justify-center h-[30px] w-[100px]  rounded-md text-white font-bold "
         >
           Hire-me

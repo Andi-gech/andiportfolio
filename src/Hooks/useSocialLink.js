@@ -1,10 +1,11 @@
 import { useQuery } from "@tanstack/react-query";
+import axios from "axios";
 const useSocialLink = () => {
   const FetchSocial = async () => {
-    const res = await fetch(
+    const res = await axios.get(
       "https://andutiipage.pythonanywhere.com/sociallinks/"
     );
-    return res.json();
+    return res.data;
   };
   return useQuery({ queryKey: ["SocialLink"], queryFn: FetchSocial });
 };

@@ -1,8 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
+import axios from "axios";
 const useFinblog = () => {
   const Fechblog = async () => {
-    const res = await fetch("https://andutiipage.pythonanywhere.com/blog/");
-    return res.json();
+    const res = await axios.get("https://andutiipage.pythonanywhere.com/blog/");
+    return res.data;
   };
   return useQuery({ queryKey: ["finblog"], queryFn: Fechblog });
 };
