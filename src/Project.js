@@ -70,7 +70,37 @@ export default function Project() {
               />
             );
           })}
-
+          
+          {/* Embedding GitHub ReadMe Cards */}
+          <div className="w-full max-w-sm p-4 rounded-md shadow-md">
+            <h3 className="text-xl text-black dark:text-white font-bold">Quick Links</h3>
+            <div className="flex flex-col gap-2 mt-4">
+              <a
+                href="https://github.com/andi-gech/Quizly"
+                target="_blank"
+                rel="noreferrer"
+                className="text-blue-600"
+              >
+                <img
+                  src="https://github-readme-stats.vercel.app/api/pin/?username=andi-gech&repo=Quizly"
+                  alt="Differ Repo"
+                  className="rounded-md"
+                />
+              </a>
+              <a
+                href="https://github.com/andi-gech/ride-clone"
+                target="_blank"
+                rel="noreferrer"
+                className="text-blue-600"
+              >
+                <img
+                  src="https://github-readme-stats.vercel.app/api/pin/?username=andi-gech&repo=ride-clone"
+                  alt="Simple SQLite Repo"
+                  className="rounded-md"
+                />
+              </a>
+            </div>
+          </div>
           
         </div>
       </div>

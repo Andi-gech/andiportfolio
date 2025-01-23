@@ -130,7 +130,7 @@ const data=[
               </div>
               <div className=" flex flex-col ml-12">
                 <p className=" font-semibold text-lg  text-buttonhover-color font-roboto">
-                  50+
+                  20+
                 </p>
                 <p className="font-bold text-sm  dark:text-white text-black">
                   projects
