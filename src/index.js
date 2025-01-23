@@ -8,6 +8,7 @@ import { BrowserRouter } from "react-router-dom";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const queryClient = new QueryClient();
 
+
 root.render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>

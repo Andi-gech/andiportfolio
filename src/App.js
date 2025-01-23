@@ -9,8 +9,12 @@ import Footer from "./Footer";
 
 function App() {
   return (
-    <div className=" dark:bg-back-color bg-slate-50 m-0 flex  flex-col  min-h-screen  w-full">
-      <Header />
+    <div className=" relative   h-screen  w-screen   overflow-x-hidden dark:bg-gradient-to-b dark:from-zinc-950 dark:via-purple-950  dark:to-black  bg-gradient-to-b from-purple-600 via-gray-50 to-blue-600">
+           <div className=" fixed z-10  top-0 left-0   dark:bg-grid-white/[0.05] bg-grid-black/[0.2] m-0 flex  flex-col  h-full  w-screen">
+           </div>
+            <Header />
+     
+
       <Routes>
         <Route path="" exact element={<Homepage />} />
         <Route path="blogs" exact element={<BlogPage />} />

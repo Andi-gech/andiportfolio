@@ -2,7 +2,7 @@ import React from "react";
 import blogimage from "../src/Asset/user.png";
 export default function TestimonyCard({ name, comment }) {
   return (
-    <div className=" flex-col flex mr-4  h-full w-full rounded-lg shadow-md flex-shrink-0 dark:shadow-white  overflow-hidden shadow-zinc-400">
+    <div className=" flex-col bg-white dark:bg-zinc-900 flex mr-4  h-full w-full rounded-lg shadow-md flex-shrink-0 dark:shadow-zinc-800  overflow-hidden shadow-zinc-400">
       <div className=" flex flex-1 flex-col  items-center justify-center ">
         <img
           src={blogimage}

@@ -21,7 +21,18 @@ export default function Testimonials() {
   ];
   const { mutate } = useSendComment();
 
-  const { data: feedback, isLoading, isError, error } = useUserFeedback();
+  const feedback=[
+    {
+      id: 1,
+      name: "Andualem",
+      message: "This is a comments",
+    },
+    {
+      id: 2,
+      name: "Andualem2",
+      message: "This is a comment2",
+    },
+  ]
 
   const changetonext = () => {
     setcurrentpage((cuurentpage + 100) % (feedback.length * 100));
@@ -45,14 +56,13 @@ export default function Testimonials() {
     e.preventDefault();
   };
 
-  if (isLoading) return <LoadingPage />;
-  if (isError) return <div>{error.message}</div>;
+
   return (
-    <div className=" flex-1  flex-col flex items-center ">
+    <div className=" flex-1   z-40 flex-col mt-[80px] flex items-center overflow-y-scroll ">
       <h2 className="   font-bold text-2xl  my-6  text-buttonhover-color">
         Testimonials
       </h2>
-      <div className=" flex flex-col  h-400px   w-full">
+      <div className=" flex flex-col  h-400px z-40   w-full">
         <div className="blogcardlist flex flex-1 self-center w-11/12 overflow-hidden  justify-center  flex-row items-center  ">
           <div
             onClick={changeback}
